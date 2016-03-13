@@ -17,7 +17,7 @@ mkdir $HOME/bin
 # Create a symbolic link at your new /bin directory
 ln -s $HOME/pypy50/pypy-5.0-linux_x86_64-portable/bin/pypy $HOME/bin
 
-# Change permisions to pypy executable
+# Change permissions to pypy executable
 chmod +x $HOME/pypy50/pypy-5.0-linux_x86_64-portable/bin/pypy
 
 # add your new /bin directory to the PATH in your .bashrc file
