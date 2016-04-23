@@ -2,32 +2,32 @@
 
 # Create a directory to download pypy-portable
 # Thanks squeaky!!
-mkdir $HOME/pypy50
+mkdir $HOME/pypy51
 
 # Create a /bin directory at your home to add pypy for your user
 mkdir $HOME/bin
 
-# Download pypy-portable 5.0
-cd $HOME/pypy50
+# Download pypy-portable 5.1
+cd $HOME/pypy51
 if [ $1 -eq 32 ]
 then
-  # Download pypy-portable 5.0
-  wget https://bitbucket.org/squeaky/portable-pypy/downloads/pypy-5.0-linux_i686-portable.tar.bz2
+  # Download pypy-portable 5.1
+  wget https://bitbucket.org/squeaky/portable-pypy/downloads/pypy-5.1-linux_i686-portable.tar.bz2
   # unzip/untar the downloaded file
-  tar xvfj pypy-5.0-linux_i686-portable.tar.bz2
+  tar xvfj pypy-5.1-linux_i686-portable.tar.bz2
   # Create a symbolic link at your new /bin directory
-  ln -s $HOME/pypy50/pypy-5.0-linux_i686-portable/bin/pypy $HOME/bin
+  ln -s $HOME/pypy51/pypy-5.1-linux_i686-portable/bin/pypy $HOME/bin
   # Change permissions to pypy executable
-  chmod +x $HOME/pypy51/pypy-5.0-linux_i686-portable/bin/pypy
+  chmod +x $HOME/pypy51/pypy-5.1-linux_i686-portable/bin/pypy
 else
-  # Download pypy-portable 5.0
-  wget https://bitbucket.org/squeaky/portable-pypy/downloads/pypy-5.0-linux_x86_64-portable.tar.bz2
+  # Download pypy-portable 5.1
+  wget https://bitbucket.org/squeaky/portable-pypy/downloads/pypy-5.1-linux_x86_64-portable.tar.bz2
   # unzip/untar the downloaded file
-  tar xvfj pypy-5.0-linux_x86_64-portable.tar.bz2
+  tar xvfj pypy-5.1-linux_x86_64-portable.tar.bz2
   # Create a symbolic link at your new /bin directory
-  ln -s $HOME/pypy50/pypy-5.0-linux_x86_64-portable/bin/pypy $HOME/bin
+  ln -s $HOME/pypy51/pypy-5.1-linux_x86_64-portable/bin/pypy $HOME/bin
   # Change permissions to pypy executable
-  chmod +x $HOME/pypy50/pypy-5.0-linux_x86_64-portable/bin/pypy
+  chmod +x $HOME/pypy51/pypy-5.1-linux_x86_64-portable/bin/pypy
 fi
 
 # add your new /bin directory to the PATH in your .bashrc file
@@ -46,4 +46,4 @@ $HOME/bin/pypyvenv/bin/pip install git+https://bitbucket.org/pypy/numpy.git
 $HOME/bin/pypyvenv/bin/pip install jupyter
 
 # Remove the downloaded pypy*.tar-bz2 file
-rm $HOME/pypy50/pypy*.tar.bz2
+rm $HOME/pypy51/pypy*.tar.bz2
