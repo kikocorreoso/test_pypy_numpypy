@@ -12,22 +12,22 @@ cd $HOME/pypy51
 if [ $1 -eq 32 ]
 then
   # Download pypy-portable 5.1
-  wget https://bitbucket.org/squeaky/portable-pypy/downloads/pypy-5.1-linux_i686-portable.tar.bz2
+  wget https://bitbucket.org/squeaky/portable-pypy/downloads/pypy-5.1.1-linux_i686-portable.tar.bz2
   # unzip/untar the downloaded file
-  tar xvfj pypy-5.1-linux_i686-portable.tar.bz2
+  tar xvfj pypy-5.1.1-linux_i686-portable.tar.bz2
   # Create a symbolic link at your new /bin directory
-  ln -s $HOME/pypy51/pypy-5.1-linux_i686-portable/bin/pypy $HOME/bin
+  ln -s $HOME/pypy51/pypy-5.1.1-linux_i686-portable/bin/pypy $HOME/bin
   # Change permissions to pypy executable
-  chmod +x $HOME/pypy51/pypy-5.1-linux_i686-portable/bin/pypy
+  chmod +x $HOME/pypy51/pypy-5.1.1-linux_i686-portable/bin/pypy
 else
   # Download pypy-portable 5.1
-  wget https://bitbucket.org/squeaky/portable-pypy/downloads/pypy-5.1-linux_x86_64-portable.tar.bz2
+  wget https://bitbucket.org/squeaky/portable-pypy/downloads/pypy-5.1.1-linux_x86_64-portable.tar.bz2
   # unzip/untar the downloaded file
-  tar xvfj pypy-5.1-linux_x86_64-portable.tar.bz2
+  tar xvfj pypy-5.1.1-linux_x86_64-portable.tar.bz2
   # Create a symbolic link at your new /bin directory
-  ln -s $HOME/pypy51/pypy-5.1-linux_x86_64-portable/bin/pypy $HOME/bin
+  ln -s $HOME/pypy51/pypy-5.1.1-linux_x86_64-portable/bin/pypy $HOME/bin
   # Change permissions to pypy executable
-  chmod +x $HOME/pypy51/pypy-5.1-linux_x86_64-portable/bin/pypy
+  chmod +x $HOME/pypy51/pypy-5.1.1-linux_x86_64-portable/bin/pypy
 fi
 
 # add your new /bin directory to the PATH in your .bashrc file
