@@ -16,7 +16,7 @@ Open a terminal and in the terminal do the following:
     chmod +x install_pypy50.sh
     bash install_pypy50.sh
 
-(In case you want to test pypy 5.1)
+(In case you want to test pypy 5.1.1)
 
 
     wget https://raw.githubusercontent.com/kikocorreoso/test_pypy_numpypy/master/install_pypy51.sh
@@ -70,7 +70,7 @@ In case you want to undo the work made by the script just do the following:
     rm -fr ~/bin/pypyvenv/
 
 and remove the folder where the portable pypy is that should be named **pypy50** or **pypy51** depending if you installed 
-pypy 5.0 or pypy 5.1, respectively:
+pypy 5.0 or pypy 5.1.1, respectively:
 
     rm -fr ~/pypy50
 
