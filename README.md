@@ -1,23 +1,10 @@
-# test_pypy_numpypy
-Script to install pypy, numpypy and jupyter in your **$HOME** directory.
+# test_scipypy
 
-# Requirements
-
-* virtualenv (tested with python 3.5 and virtualenv 13.0.1)
-* git
+Script to install pypy, numpy, pandas, matplotlib, scipy, IPython and jupyter in your **$HOME** directory.
 
 # Usage of the script
 
 Open a terminal and in the terminal do the following:
-
-(In case you want to test pypy 5.0)
-
-    wget https://raw.githubusercontent.com/kikocorreoso/test_pypy_numpypy/master/install_pypy50.sh
-    chmod +x install_pypy50.sh
-    bash install_pypy50.sh
-
-(In case you want to test pypy 5.1.1)
-
 
     wget https://raw.githubusercontent.com/kikocorreoso/test_pypy_numpypy/master/install_pypy51.sh
     chmod +x install_pypy51.sh
