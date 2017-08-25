@@ -58,7 +58,7 @@ Your prompt should be something like:
 
 To install new libraries in the virtualenv once is activated you could use:
 
-    virtualenv-pypy install name_of_the_library_to_install
+    pip install name_of_the_library_to_install
 
 To deactivate the virtualenv just do:
 
