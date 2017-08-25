@@ -1,29 +1,44 @@
 # test_scipypy
 
-Script to install pypy, numpy, pandas, matplotlib, scipy, IPython and jupyter in your **$HOME** directory.
+Script to install pypy, numpy, pandas, matplotlib, scipy, IPython and jupyter in your `$HOME` directory.
 
 # Usage of the script
 
 Open a terminal and in the terminal do the following:
 
-    wget https://raw.githubusercontent.com/kikocorreoso/test_pypy_numpypy/master/install_pypy51.sh
-    chmod +x install_pypy51.sh
-    bash install_pypy51.sh
+    wget https://raw.githubusercontent.com/kikocorreoso/test_scipypy/master/install_scipypy.sh
+    chmod +x install_scipypy.sh
+    bash install_scipypy.sh
+    
+# Options of the script
 
-This will create a **pypy50** or **pypy51** folder, depending what you have chosen to install, with a 64-bits portable pypy (Thanks to [Squeaky](https://github.com/squeaky-pl/portable-pypy)!!).
+By default it will install all the stuff in `$HOME/pypy` and it will use the latest pypy3 version. You can change this using:
 
-On the third line you can pass an argument specifying if you want the 32 or 64 bits version to be installed, e.g., to install the 32 bits version do:
+* `-n` or `--name` to define the name of the folder where all will be installed
 
-    bash install_pypy51.sh 32
+```
+bash install_scipypy.sh -n my_pypy_folder # to install it in $HOME/my_pypy_folder
+```
 
-By default, if you do not specify an argument it installs the 64 bits version.
+* `-p` or `--python` to define the pypy version to be installed. Use `2` to install the latest pypy compatible with CPython2.7 or `3` to install the latest pypy compatible with CPython 3.x.
+
+```
+bash install_scipypy.sh -p 2 # to install pypy2 (compatible with CPython2.7)
+```
+
+# Result
+
+After running the script:
+
+* a new folder will be created in your `$HOME` directory with a 64-bits portable pypy (Thanks to [Squeaky](https://github.com/squeaky-pl/portable-pypy)!!).
+
+* a new path will be added to your `$PATH` modifying your `.bashrc`.
+
+* a virtualenv will be created in your new folder called `pypyvenv` with NumPy, Matplotlib (\*), pandas, SciPy (\*), IPython and Jupyter.
+
+(\*) Matplotlib and SciPy installation may fail if you do not have the necessary requirements in your system (freetype, libpng, BLAS, LAPACK,...)
 
 WARNING: I have tested it only on a 64-bits debian based linux. If you find errors, please, open an [issue](https://github.com/kikocorreoso/test_pypy_numpypy/issues).
-
-After creating the **pypy5X** folder it will add some commands to your **.bashrc** that will add a pypy executable to the path. The new pypy 
-executable will be created in a new **bin** folder created at your **$HOME**.
-
-After that, `virtualenv` will create a new virtualenv called **pypyvenv** in the recently created **bin** directory and it will install *numpypy* (here it needs *git*) and *jupyter* with all its dependencies.
 
 # Running `pypy`
 
@@ -31,19 +46,19 @@ After that, `virtualenv` will create a new virtualenv called **pypyvenv** in the
 
     pypy
 
-# Running `pypy`, `numpypy` and `jupyter` from the virtualenv
+# Running `pypy` from the virtualenv
 
-Open a terminal and do the following:
+Open a terminal, go to the folder where the script have installed all the stuff and do the following:
 
-    . ~/bin/pypyvenv/bin/activate
+    source ~/pypyvenv/bin/activate
 
 Your prompt should be something like:
 
     (pypyvenv)tornado@tornado-machine:~$
 
-To run `jupyter`:
+To install new libraries in the virtualenv once is activated you could use:
 
-    jupyter notebook
+    virtualenv-pypy install name_of_the_library_to_install
 
 To deactivate the virtualenv just do:
 
@@ -53,21 +68,11 @@ To deactivate the virtualenv just do:
 
 In case you want to undo the work made by the script just do the following:
 
-    rm  ~/bin/pypy
-    rm -fr ~/bin/pypyvenv/
+* remove the folder where the portable pypy was installed
 
-and remove the folder where the portable pypy is that should be named **pypy50** or **pypy51** depending if you installed 
-pypy 5.0 or pypy 5.1.1, respectively:
+* And edit your *.bashrc* to remove the lines:
 
-    rm -fr ~/pypy50
-
-or
-
-    rm -fr ~/pypy51
-
-And edit your *.bashrc* to remove the lines:
-
-    # Added path to include pypy by tornado
+    # Added path to include pypy by user $USER
     export PATH=[...........]
 
 
