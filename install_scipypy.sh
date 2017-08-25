@@ -90,8 +90,7 @@ virtualenv-pypy $HOME/$FOLDER_NAME/pypyvenv
 $HOME/$FOLDER_NAME/pypyvenv/bin/pip install numpy
 
 # Install matplotlib using pip from the new virtualenv
-# As it need to install some system dependencies for now it is not installed
-#$HOME/$FOLDER_NAME/pypyvenv/bin/pip install matplotlib
+$HOME/$FOLDER_NAME/pypyvenv/bin/pip install matplotlib
 
 # Install pandas using pip from the new virtualenv
 $HOME/$FOLDER_NAME/pypyvenv/bin/pip install pandas
