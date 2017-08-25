@@ -72,8 +72,10 @@ In case you want to undo the work made by the script just do the following:
 
 * And edit your *.bashrc* to remove the lines:
 
-    # Added path to include pypy by user $USER
-    export PATH=[...........]
+```
+# Added path to include pypy by user $USER
+export PATH=[...........]
+```
 
 
 
